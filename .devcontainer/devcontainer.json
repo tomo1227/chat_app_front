@@ -1,0 +1,56 @@
+{
+    "name": "chat-app",
+    "dockerComposeFile": [
+        "../docker-compose.yml",
+        "docker-compose.yml"
+    ],
+    "service": "devcontainer",
+    "workspaceFolder": "/workspace",
+    "features": {
+    },
+    "postCreateCommand": "sh .devcontainer/post_create.sh",
+    "postStartCommand": "sh .devcontainer/post_start.sh ${containerWorkspaceFolder}",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "editor.guides.bracketPairs": true,
+                "editor.stickyScroll.enabled": true,
+                "editor.stickyScroll.maxLineCount": 5,
+                "workbench.colorCustomizations": {
+                    "editorStickyScroll.background": "#00708D",
+                    "editorStickyScrollHover.background": "#59A2B5"
+                },
+                "stylelint.validate": ["css"],
+                "css.validate": false,
+                "editor.codeActionsOnSave": {
+                    "source.fixAll.eslint": "explicit",
+                    "source.fixAll.stylelint": "explicit"
+                },
+                "typescript.preferences.importModuleSpecifier": "non-relative",
+                "[typescriptreact]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "[javascript]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+                }
+            },
+            "extensions": [
+                "ms-vscode.live-server",
+                "dbaeumer.vscode-eslint",
+                "stylelint.vscode-stylelint",
+                "esbenp.prettier-vscode",
+                "streetsidesoftware.code-spell-checker",
+                "naumovs.color-highlight",
+                "burkeholland.simple-react-snippets",
+                "formulahendry.auto-rename-tag",
+                "MariusAlchimavicius.json-to-ts",
+                "styled-components.vscode-styled-components",
+                "Gruntfuggly.todo-tree",
+                "GitHub.vscode-pull-request-github", // git graph
+                "mhutchie.git-graph", // git graph
+                "seatonjiang.gitmoji-vscode",
+                "oderwat.indent-rainbow"
+            ]
+        }
+    }
+}
